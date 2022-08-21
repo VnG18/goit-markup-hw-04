@@ -4,6 +4,8 @@
   --primary-text-color: #212121;
   --secondary-text-color: #757575;
   --accent-color: #2196f3;
+  --fill-icon-color: #afb1b8;
+  --selection-color: #ffffff;
 }
 
 /* ================== reset the defaults ================== */
@@ -119,9 +121,6 @@ body {
   display: flex;
   justify-content: space-between;
 
-  padding-top: 24px;
-  padding-bottom: 24px;
-
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -134,8 +133,6 @@ body {
 
 .menu {
   display: flex;
-  /* margin-top: 32px;
-  margin-bottom: 32px; */
   margin-left: 93px;
 }
 
@@ -158,12 +155,9 @@ body {
 }
 
 .header-contact {
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--secondary-text-color);
-}
-
-.header-contact:hover,
-.header-contact:focus {
-  color: var(--accent-color);
 }
 
 .contacts-item {
@@ -173,12 +167,19 @@ body {
 .contacts-item:last-child {
   margin-left: 50px;
 }
-.img-with-icon {
+.icon-contacts {
   display: flex;
+  align-items: center;
 }
 
-.img-with-icon-item:not(:first-child) {
+.contact-list-item:not(:first-child) {
   margin-left: 10px;
+}
+
+.icon-contacts:hover,
+.icon-contacts:focus {
+  color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 /* ================== /header ================== */
@@ -186,6 +187,12 @@ body {
 /* ================== hero ================== */
 
 .hero {
+  max-width: 1600px;
+  height: 600px;
+
+  margin-left: auto;
+  margin-right: auto;
+
   padding-top: 200px;
   padding-bottom: 200px;
 
@@ -198,12 +205,17 @@ body {
   text-transform: uppercase;
 
   color: #ffffff;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../images/backgrounds/effect-solutions.jpg");
 }
 
 .hero-header {
   width: 696px;
   margin-left: auto;
-  /* margin-bottom: 30px; */
   margin-right: auto;
 
   font-weight: 900;
@@ -213,13 +225,6 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-}
-
-.hero-container {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
 }
 
 .hero-btn {
@@ -265,6 +270,8 @@ body {
 }
 
 .advantage-header {
+  margin-top: 30px;
+
   font-size: 14px;
   font-weight: 700;
   line-height: 1.14;
@@ -279,6 +286,17 @@ body {
 
   color: var(--secondary-text-color);
 }
+
+.advantage-ico {
+  width: 270px;
+  height: 120px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
 /* ================== /section-advantage ================== */
 
 /* ================== section-activity ================== */
@@ -308,15 +326,12 @@ body {
 }
 
 .team-item {
-  /* display: flex;
-  flex-direction: column; */
-
-  text-align: center;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .employee-name {
-  /* margin-top: 30px; */
-
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -326,7 +341,6 @@ body {
 
 .job-title {
   margin-top: 10px;
-  /* margin-bottom: 30px; */
 
   font-size: 16px;
   line-height: 1.19;
@@ -342,13 +356,101 @@ body {
 
   text-align: center;
 }
+
+.job-links {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 16px;
+}
+
+.job-link-item {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.job-link-item:hover {
+  fill: var(--selection-color);
+  background-color: var(--accent-color);
+}
+
+.job-link-logo {
+  /* width: 20px;
+  height: 20px; */
+  fill: var(--fill-icon-color);
+}
+
+.job-link-logo:hover,
+.job-link-logo:focus {
+  fill: var(--selection-color);
+}
+
+.team-link-social {
+  display: block;
+  padding: 12px;
+}
 /* ================== /section-team ================== */
+
+/* ================== permanent-clients ================== */
+.permanent-clients-header {
+  padding-bottom: 50px;
+}
+
+.section-permanent-clients {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.permanent-clients-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.permanent-clients-item {
+  display: flex;
+  justify-content: center;
+
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.permanent-clients-item:hover,
+.permanent-clients-item:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.permanent-clienst-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 106px;
+  height: 60px;
+}
+
+.permanent-clients-svg {
+  display: block;
+}
+
+/* ================== /permanent-clients ================== */
 
 /* ================== footer ================== */
 
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.footer-content {
+  display: flex;
 }
 
 .footer .logo-link {
@@ -373,6 +475,57 @@ body {
 }
 .footer-contacts {
   color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-join {
+  margin-top: 12px;
+  margin-left: 70px;
+}
+
+.footer-header {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.socials-links {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.socials-link-item {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.socials-link-item:not(:first-child) {
+  margin-left: 10px;
+}
+
+.socials-link-item:hover {
+  fill: var(--selection-color);
+  background-color: var(--accent-color);
+}
+
+.socials-link-logo {
+  /* width: 20px;
+  height: 20px; */
+  fill: var(--fill-icon-color);
+}
+
+.socials-link-logo:hover,
+.socials-link-logo:focus {
+  fill: var(--selection-color);
+}
+
+.footer-link-social {
+  display: block;
+  padding: 12px;
 }
 /* ================== /footer ================== */
 
@@ -403,6 +556,10 @@ body {
 .btn:focus {
   background-color: var(--accent-color);
   color: #ffffff;
+
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 .btn:not(:first-child) {
@@ -430,6 +587,12 @@ body {
   margin-bottom: 30px;
 
   width: 370px;
+}
+
+.samples-item:hover,
+.samples-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .samples-item > img {
