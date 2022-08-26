@@ -419,11 +419,18 @@ body {
 
   width: 100%;
   height: 100%;
+
+  fill: #afb1b8;
+}
+
+.permanent-clienst-link > svg {
+  color: inherit;
 }
 
 .permanent-clienst-link:hover,
 .permanent-clienst-link:focus {
   border: 1px solid var(--accent-color);
+  fill: var(--accent-color);
 }
 
 /* ================== /permanent-clients ================== */
@@ -479,7 +486,7 @@ body {
 
 .socials-links {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-top: 20px;
 }
 
